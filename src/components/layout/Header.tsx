@@ -17,7 +17,7 @@ export function Header() {
     return (
         <>
             <TopBar />
-            <header className="relative z-50 w-full border-b bg-page/80 backdrop-blur-md">
+            <header className="sticky top-0 z-50 w-full border-b bg-page/80 backdrop-blur-md">
                 <div className="container mx-auto flex h-16 items-center justify-between px-4">
                     <Link href="/" className="flex items-center gap-2">
                         <Image
