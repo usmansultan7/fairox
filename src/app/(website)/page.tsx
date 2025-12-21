@@ -8,6 +8,7 @@ import { ProblemSolution } from "@/components/sections/ProblemSolution";
 import { BusinessModel } from "@/components/sections/BusinessModel";
 import { Features } from "@/components/sections/Features";
 import { Leadership } from "@/components/sections/Leadership";
+import { Testimonials } from "@/components/sections/Testimonials";
 import { client } from "@/sanity/lib/client";
 
 async function getHeroData() {
@@ -33,6 +34,7 @@ export default async function Home() {
       <Comparison />
 
       <Features />
+      <Testimonials />
       <BusinessModel />
       <Leadership />
     </>
