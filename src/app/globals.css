@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+@theme {
+  /* Updated Primary to match the middle tone of the gradient for solid use */
+  --color-primary: #115DA0;
+
+  /* Backgrounds */
+  --color-page: #F6FAFF;
+  --color-section: #E9F2FF;
+  --color-footer: #1E293B;
+
+  /* Typography */
+  --color-heading: #1E293B;
+  --color-body: #4B5563;
+
+  /* Status */
+  --color-success: #22C55E;
+  --color-warning: #F59E0B;
+  --color-error: #EF4444;
+
+  /* Font Families - to be wired in layout.tsx */
+  --font-sans: var(--font-jakarta);
+}
+
+@utility bg-gradient-brand {
+  background-image: linear-gradient(to right, #115DA0, #21A5A3, #9AD898);
+}
+
+@utility text-gradient-brand {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to right, #115DA0, #21A5A3, #9AD898);
+}
+
+/* Utilities */
+@utility container {
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+body {
+  background-color: var(--color-page);
+  color: var(--color-body);
+  /* font-family set via layout.tsx variable */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-heading);
+}
