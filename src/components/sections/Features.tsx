@@ -56,9 +56,9 @@ export function Features() {
                     </p>
                 </div>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
+                <div className="flex flex-wrap justify-center gap-8">
                     {features.map((feature, i) => (
-                        <div key={i} className="p-8 rounded-2xl border border-white/60 shadow-lg bg-white/60 backdrop-blur-md hover:bg-white/80 transition-all duration-300 hover:shadow-xl hover:scale-[1.02] group ring-1 ring-white/50">
+                        <div key={i} className="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.34rem)] p-8 rounded-2xl border border-white/60 shadow-lg bg-white/60 backdrop-blur-md hover:bg-white/80 transition-all duration-300 hover:shadow-xl hover:scale-[1.02] group ring-1 ring-white/50">
                             <div className="flex items-center gap-4 mb-4">
                                 <div className="h-14 w-14 flex flex-shrink-0 items-center justify-center bg-white/90 rounded-xl shadow-sm group-hover:scale-110 transition-transform duration-300 ring-1 ring-primary/10">
                                     <feature.icon className="h-7 w-7 text-primary" />

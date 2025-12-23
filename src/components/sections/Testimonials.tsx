@@ -63,8 +63,8 @@ export function Testimonials() {
             <div className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
                 <ul className="flex items-stretch justify-center md:justify-start [&_li]:mx-4 [&_img]:max-w-none animate-scroll">
                     {reviews.map((review, index) => (
-                        <li key={index} className="w-[350px] md:w-[450px] flex-shrink-0">
-                            <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 h-full flex flex-col relative group">
+                        <li key={index} className="w-[280px] sm:w-[350px] md:w-[450px] flex-shrink-0">
+                            <div className="bg-white p-6 md:p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 h-full flex flex-col relative group">
                                 <Quote className="absolute top-6 right-6 text-primary/10 h-10 w-10 group-hover:text-primary/20 transition-colors" />
 
                                 <div className="flex gap-1 mb-4">
@@ -84,6 +84,7 @@ export function Testimonials() {
                                             alt={review.name}
                                             fill
                                             className="object-cover"
+                                            sizes="48px"
                                         />
                                     </div>
                                     <div>

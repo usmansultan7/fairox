@@ -6,7 +6,7 @@ export function Contact() {
         <section id="contact" className="pb-24 pt-12 bg-gray-50">
             <div className="container mx-auto px-4">
                 <div className="max-w-3xl mx-auto text-center mb-12">
-                    <h2 className="text-3xl md:text-4xl font-bold text-heading mb-4">Get Your Free Audit</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold text-heading mb-4">Request a Demo</h2>
                     <p className="text-body text-lg">
                         Contact us today to see how much revenue you can recover. No obligation, no risk.
                     </p>
@@ -36,7 +36,7 @@ export function Contact() {
                         </div>
 
                         <Button size="lg" className="w-full text-lg h-14 shadow-lg shadow-primary/25">
-                            Request Free Audit
+                            Request a Demo
                         </Button>
 
                         <p className="text-xs text-center text-gray-400 mt-4">

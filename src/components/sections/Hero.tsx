@@ -36,7 +36,7 @@ export function Hero({ headline, subtext, image }: HeroProps) {
                         src={urlFor(image).width(1920).url()}
                         alt="Hero Background"
                         fill
-                        className="object-cover"
+                        className="object-cover object-[80%_center] md:object-center"
                         priority
                     />
                     {/* Dark Overlay for readability */}
@@ -49,12 +49,12 @@ export function Hero({ headline, subtext, image }: HeroProps) {
                     <span>Smart Overlay AI Technology</span>
                 </div>
 
-                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter mb-6 drop-shadow-md">
+                <h1 className="flex flex-col md:block items-center text-5xl md:text-6xl lg:text-7xl font-bold tracking-tighter mb-6 drop-shadow-md">
                     {headline ? (
                         renderHeadline(headline)
                     ) : (
                         <>
-                            <span className="text-white">ONE SETUP.</span>{" "}
+                            <span className="text-white text-6xl md:text-6xl mb-2 md:mb-0">ONE SETUP.</span>
                             <span className="text-gradient-brand">LIFETIME EASE.</span>
                         </>
                     )}
@@ -67,7 +67,7 @@ export function Hero({ headline, subtext, image }: HeroProps) {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
                     <Link href="/audit">
                         <Button size="lg" className="h-12 px-8 text-base shadow-lg bg-gradient-brand hover:opacity-90 border-0">
-                            Get a Free Audit
+                            Request a Demo
                         </Button>
                     </Link>
                     <Link href="#how-it-works">
@@ -77,6 +77,6 @@ export function Hero({ headline, subtext, image }: HeroProps) {
                     </Link>
                 </div>
             </div>
-        </section>
+        </section >
     );
 }

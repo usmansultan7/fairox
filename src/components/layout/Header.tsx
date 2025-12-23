@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { TopBar } from "./TopBar";
@@ -9,6 +9,25 @@ import { Menu, X } from "lucide-react";
 
 export function Header() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const headerRef = useRef<HTMLElement>(null);
+
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (headerRef.current && !headerRef.current.contains(event.target as Node)) {
+                setIsMobileMenuOpen(false);
+            }
+        };
+
+        if (isMobileMenuOpen) {
+            document.addEventListener("mousedown", handleClickOutside);
+        } else {
+            document.removeEventListener("mousedown", handleClickOutside);
+        }
+
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, [isMobileMenuOpen]);
 
     const toggleMenu = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -17,8 +36,8 @@ export function Header() {
     return (
         <>
             <TopBar />
-            <header className="sticky top-0 z-50 w-full border-b bg-page/80 backdrop-blur-md">
-                <div className="container mx-auto flex h-16 items-center justify-between px-4">
+            <header ref={headerRef} className="sticky top-0 z-50 w-full border-b bg-page/80 backdrop-blur-md">
+                <div className="mx-auto flex h-16 items-center justify-between px-4">
                     <Link href="/" className="flex items-center gap-2">
                         <Image
                             src="/assets/Fairox_Logo.png"
@@ -26,6 +45,7 @@ export function Header() {
                             width={120}
                             height={40}
                             className="h-10 w-auto"
+                            style={{ width: "auto" }}
                         />
                     </Link>
 
@@ -48,7 +68,7 @@ export function Header() {
                     <div className="flex items-center gap-4">
                         <Link href="/audit" className="hidden md:block">
                             <Button>
-                                Get a Free Audit
+                                Request a Demo
                             </Button>
                         </Link>
 
@@ -76,7 +96,7 @@ export function Header() {
                         </Link>
                         <Link href="/audit" onClick={() => setIsMobileMenuOpen(false)} className="w-full">
                             <Button className="w-full">
-                                Get a Free Audit
+                                Request a Demo
                             </Button>
                         </Link>
                     </div>

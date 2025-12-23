@@ -39,13 +39,14 @@ export function Leadership() {
                     {team.map((member, index) => (
                         <div key={index} className="group relative">
                             {/* Gradient Frame Container */}
-                            <div className="p-1 rounded-2xl bg-gradient-brand shadow-lg mb-6 transform transition-transform duration-300 group-hover:-translate-y-2">
-                                <div className="relative h-[400px] w-full rounded-xl overflow-hidden bg-white">
+                            <div className="p-1 rounded-2xl bg-gradient-brand shadow-lg mb-6 transform transition-transform duration-300 group-hover:-translate-y-2 max-w-[280px] mx-auto">
+                                <div className="relative h-[280px] w-full rounded-xl overflow-hidden bg-white">
                                     <Image
                                         src={member.image}
                                         alt={member.name}
                                         fill
                                         className="object-cover transition-transform duration-500 group-hover:scale-105"
+                                        sizes="(max-width: 768px) 100vw, 280px"
                                     />
                                     {/* Overlay Gradient */}
                                     <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-6">

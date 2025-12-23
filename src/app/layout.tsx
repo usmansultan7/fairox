@@ -10,6 +10,16 @@ const jakarta = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   title: "FAIROX - Smart Middleware & Overlay AI for Healthcare Billing",
   description: "One Setup. Lifetime Ease. Clean claims and recover revenue without changing your software.",
+  icons: {
+    icon: [
+      { url: "/favicon-32x32.png", type: "image/png", sizes: "32x32" },
+      { url: "/favicon-16x16.png", type: "image/png", sizes: "16x16" },
+    ],
+    apple: "/apple-touch-icon.png",
+    other: [
+      { rel: "manifest", url: "/site.webmanifest" }
+    ]
+  },
 };
 
 export default function RootLayout({
