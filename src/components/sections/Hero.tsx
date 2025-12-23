@@ -38,6 +38,7 @@ export function Hero({ headline, subtext, image }: HeroProps) {
                         fill
                         className="object-cover object-[80%_center] md:object-center"
                         priority
+                        sizes="100vw"
                     />
                     {/* Dark Overlay for readability */}
                     <div className="absolute inset-0 bg-black/60" />
